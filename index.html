@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northern Flavours Restaurant — Order Food Online in Dutse | Taste the Difference</title>
+<meta name="description" content="Northern Flavours Restaurant, Gajambe Plaza, Dutse, Jigawa State. Order lunch & dinner specials, shawarma and family packages on WhatsApp. Dine-in, takeaway & fast delivery.">
+<meta name="theme-color" content="#072413">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23072b16' stroke='%23d9a53a' stroke-width='4'/%3E%3Ctext x='32' y='42' font-family='Arial Black' font-size='24' fill='%23faf4e2' text-anchor='middle'%3ENF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ DESIGN TOKENS (from the flyer: deep green · gold · cream) ============ */
+:root{
+  --green-950:#04170c; --green-900:#072413; --green-850:#0a2e18; --green-800:#0e3a1f;
+  --green-700:#155c2e; --green-600:#1e7a3e;
+  --gold:#d9a53a; --gold-2:#f2c14e; --gold-3:#ffe08a;
+  --cream:#faf4e2; --cream-2:#f2e8cc; --cream-3:#e9dcb8;
+  --ink:#122b19; --ink-soft:#4b5c4e;
+  --red:#c8432f; --wa:#1ba552;
+  --font-display:'Anton',Impact,sans-serif;
+  --font-script:'Dancing Script',cursive;
+  --font-body:'Poppins',system-ui,sans-serif;
+  --radius:20px;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23d9a53a' stroke-opacity='.08'%3E%3Cpath d='M36 8l10 10-10 10-10-10zM36 44l10 10-10 10-10-10z'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+body.no-scroll{overflow:hidden}
+img,svg{vertical-align:middle}
+::selection{background:var(--gold-2);color:var(--green-900)}
+:focus-visible{outline:3px solid var(--gold-2);outline-offset:2px;border-radius:6px}
+.container{width:min(1120px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:.02em;line-height:1.1}
+.script{font-family:var(--font-script);color:var(--gold);font-weight:700}
+.section{padding:84px 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 2.6rem}
+.section-head h2{font-size:clamp(1.9rem,4.5vw,2.7rem);text-transform:uppercase}
+.section-head .script{font-size:1.6rem;display:block;margin-bottom:.2rem}
+.section-sub{color:var(--ink-soft);font-size:.98rem}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--font-body);font-weight:700;font-size:1rem;border:0;cursor:pointer;border-radius:999px;padding:.95rem 1.9rem;text-decoration:none;transition:transform .22s,box-shadow .22s,background .22s,color .22s}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-3),var(--gold-2) 45%,#d99a2b);color:#3a2606;box-shadow:0 10px 26px rgba(217,154,43,.4)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(217,154,43,.5)}
+.btn-ghost{background:transparent;color:var(--cream);border:2px solid rgba(250,244,226,.45)}
+.btn-ghost:hover{border-color:var(--gold-2);color:var(--gold-2)}
+.btn-green{background:linear-gradient(135deg,var(--green-600),var(--green-800));color:#fff;box-shadow:0 10px 24px rgba(14,74,36,.35)}
+.btn-green:hover{transform:translateY(-2px)}
+.btn-green:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-wa{background:linear-gradient(135deg,#2bb45c,#128c46);color:#fff;box-shadow:0 12px 28px rgba(18,140,70,.4);letter-spacing:.02em}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-outline-green{background:transparent;border:2px solid var(--green-700);color:var(--green-800)}
+.btn-outline-green:hover{background:var(--green-700);color:#fff}
+.btn-plain{background:transparent;color:var(--ink-soft);text-decoration:underline;padding:.6rem}
+.btn-block{width:100%}
+
+/* ============ HEADER ============ */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(6,26,14,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,165,58,.28)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brand-mark{width:47px;height:47px;flex:0 0 47px;border-radius:50%;background:radial-gradient(circle at 32% 26%,var(--green-600),var(--green-900) 75%);border:2px solid var(--gold);box-shadow:inset 0 0 0 3px rgba(4,23,12,.85),0 4px 12px rgba(0,0,0,.45);display:grid;place-items:center;font-family:var(--font-display);color:var(--cream);font-size:1.05rem;letter-spacing:.04em}
+.brand-name{display:block;font-family:var(--font-display);color:var(--cream);font-size:1.02rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.1}
+.brand-sub{display:block;font-size:.58rem;letter-spacing:.34em;color:var(--gold-2);text-transform:uppercase;font-weight:600}
+.main-nav{display:flex;gap:1.7rem}
+.main-nav a{color:var(--cream);text-decoration:none;font-size:.92rem;font-weight:500;position:relative;padding:.35rem 0}
+.main-nav a::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold-2);transition:width .25s}
+.main-nav a:hover::after,.main-nav a.active::after{width:100%}
+.main-nav a.active{color:var(--gold-3)}
+.header-actions{display:flex;align-items:center;gap:.7rem}
+.cart-btn{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--gold-3),#d99a2b);border:0;border-radius:999px;padding:.55rem 1.15rem;font-family:var(--font-body);font-weight:700;font-size:.92rem;color:#3a2606;cursor:pointer;box-shadow:0 6px 16px rgba(217,154,43,.35);transition:transform .2s}
+.cart-btn:hover{transform:translateY(-1px)}
+.cart-count{position:absolute;top:-7px;right:-7px;min-width:21px;height:21px;padding:0 5px;border-radius:999px;background:var(--red);color:#fff;font-size:.72rem;font-weight:800;display:grid;place-items:center;border:2px solid var(--green-950)}
+.cart-count.pop{animation:pop .35s}
+@keyframes pop{50%{transform:scale(1.45)}}
+.hamburger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer;flex-direction:column;justify-content:center;gap:6px;align-items:center}
+.hamburger span{width:24px;height:2.6px;background:var(--cream);border-radius:2px;transition:.3s}
+.nav-open .hamburger span:nth-child(1){transform:translateY(8.6px) rotate(45deg)}
+.nav-open .hamburger span:nth-child(2){opacity:0}
+.nav-open .hamburger span:nth-child(3){transform:translateY(-8.6px) rotate(-45deg)}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:130px 0 90px;color:var(--cream);overflow:hidden;background:
+  radial-gradient(900px 520px at 85% 8%,rgba(217,165,58,.16),transparent 60%),
+  radial-gradient(700px 520px at 8% 95%,rgba(30,122,62,.3),transparent 60%),
+  linear-gradient(165deg,#0a2e18,#04170c 72%)}
+.hero::before{content:'';position:absolute;inset:0;background:var(--pattern);opacity:.9;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(217,165,58,.45);background:rgba(217,165,58,.09);color:var(--gold-3);padding:.42rem 1.05rem;border-radius:999px;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.hero-script{font-family:var(--font-script);font-size:clamp(1.5rem,3vw,2rem);color:var(--gold-2);margin:1.1rem 0 .1rem}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.3rem);text-transform:uppercase;margin-bottom:.9rem}
+.hero h1 .accent{color:var(--gold-2)}
+.hero-desc{max-width:52ch;color:#e9e3cf;font-size:1.02rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.7rem}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.9rem}
+.hero-chips span{font-size:.8rem;font-weight:500;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:.4rem .85rem;border-radius:999px}
+.hero-art{position:relative;display:grid;place-items:center;min-height:420px}
+.plate{position:relative;width:min(350px,74vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#fff8e8 0%,#f6e6c2 48%,#e7c98e 100%);box-shadow:0 34px 70px rgba(0,0,0,.55),inset 0 0 0 10px rgba(255,255,255,.4),inset 0 0 0 22px rgba(217,165,58,.3);animation:bob 6s ease-in-out infinite}
+.plate .food{position:absolute;filter:drop-shadow(0 8px 12px rgba(0,0,0,.28))}
+.food-rice{font-size:9rem;top:10%;left:15%}
+.food-chicken{font-size:6.2rem;right:10%;top:36%}
+.food-salad{font-size:4.4rem;left:18%;bottom:11%}
+.food-pepper{font-size:2.4rem;right:26%;bottom:13%}
+.float-chip{position:absolute;background:#fff;color:var(--ink);border-radius:999px;padding:.55rem .95rem;font-weight:700;font-size:.9rem;box-shadow:0 14px 30px rgba(0,0,0,.4);animation:bob 5s ease-in-out infinite}
+.chip-shawarma{top:6%;right:10%;font-size:2.1rem;padding:.5rem .6rem}
+.chip-drink{bottom:16%;right:2%;font-size:1.9rem;padding:.5rem .6rem;animation-delay:1.2s}
+.chip-20{top:14%;left:0;background:linear-gradient(135deg,var(--gold-3),var(--gold-2));color:#3a2606;animation-delay:.6s}
+.seal{position:absolute;bottom:4%;left:9%;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-3),#d99a2b);color:#3a2606;font-family:var(--font-display);font-size:1.35rem;border:3px dashed rgba(58,38,6,.55);transform:rotate(-12deg)}
+@keyframes bob{50%{transform:translateY(-13px)}}
+
+/* ============ PROMISE STRIP ============ */
+.promise{background:var(--cream)}
+.promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.promise-card{background:#fff;border-radius:var(--radius);padding:1.5rem 1.3rem;box-shadow:0 12px 30px rgba(18,43,25,.08);border-top:4px solid var(--gold);transition:transform .25s}
+.promise-card:hover{transform:translateY(-5px)}
+.promise-icon{width:52px;height:52px;border-radius:14px;background:radial-gradient(circle at 30% 25%,var(--green-600),var(--green-900));display:grid;place-items:center;font-size:1.5rem;margin-bottom:.9rem;box-shadow:0 6px 14px rgba(14,74,36,.3)}
+.promise-card h3{font-size:1.02rem;text-transform:uppercase;color:var(--green-900);margin-bottom:.3rem;font-family:var(--font-body);font-weight:800;letter-spacing:.02em}
+.promise-card p{font-size:.85rem;color:var(--ink-soft)}
+
+/* ============ MENU ============ */
+.menu{background:radial-gradient(800px 400px at 90% 0%,rgba(217,165,58,.12),transparent 55%),linear-gradient(170deg,var(--green-900),var(--green-950));color:var(--cream);position:relative}
+.menu::before{content:'';position:absolute;inset:0;background:var(--pattern);pointer-events:none}
+.menu .container{position:relative}
+.menu .section-head h2{color:var(--cream)}
+.menu .section-sub{color:#cfd8c4}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.7rem}
+.menu-card{background:var(--cream);color:var(--ink);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 22px 50px rgba(0,0,0,.4);position:relative;transition:transform .3s,box-shadow .3s}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.card-media{position:relative;height:172px;display:grid;place-items:center;background:radial-gradient(320px 200px at 50% 0%,rgba(217,165,58,.22),transparent 60%),linear-gradient(160deg,#145c2e,#0a2e18)}
+.card-media::after{content:'';position:absolute;inset:0;background:var(--pattern)}
+.plate-sm{position:relative;z-index:1;width:118px;height:118px;border-radius:50%;display:grid;place-items:center;font-size:3.4rem;background:radial-gradient(circle at 50% 38%,#fff8e8,#eeda b0);background:radial-gradient(circle at 50% 38%,#fff8e8,#eedab0);border:6px solid #fff;outline:2px solid var(--gold);box-shadow:0 14px 26px rgba(0,0,0,.35)}
+.corner-num{position:absolute;top:0;right:18px;z-index:2;background:linear-gradient(180deg,var(--gold-3),var(--gold));color:#3a2606;font-family:var(--font-display);font-size:1.05rem;padding:.4rem .62rem .6rem;border-radius:0 0 10px 10px;box-shadow:0 6px 12px rgba(0,0,0,.3)}
+.badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--red);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .75rem;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.badge.gold{background:linear-gradient(135deg,var(--gold-3),var(--gold));color:#3a2606}
+.card-body{padding:1.25rem 1.4rem .2rem;flex:1;display:flex;flex-direction:column}
+.card-tagline{font-family:var(--font-script);font-weight:700;color:#8a6a1c;font-size:1.22rem}
+.card-body h3{font-size:1.55rem;text-transform:uppercase;color:var(--green-900);margin:.1rem 0 .4rem}
+.card-desc{font-size:.9rem;color:#4a5b4c}
+.serves{display:inline-block;align-self:flex-start;background:#e5f1de;color:#186133;font-size:.75rem;font-weight:700;padding:.28rem .75rem;border-radius:999px;margin-top:.55rem}
+.includes{list-style:none;margin:.7rem 0 .1rem;display:grid;gap:.32rem}
+.includes li{font-size:.87rem;font-weight:500;display:flex;gap:.55rem;align-items:center}
+.includes li::before{content:'✓';flex:0 0 19px;height:19px;border-radius:50%;background:var(--green-700);color:#fff;font-size:.68rem;display:grid;place-items:center;font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.chips span{font-size:.71rem;font-weight:600;background:#f3e9cb;border:1px solid #e3d3a2;color:#6b5416;padding:.3rem .7rem;border-radius:999px}
+.meta-line{font-size:.78rem;color:#6d7d68;margin-top:.65rem;font-weight:500}
+.ribbon{background:linear-gradient(90deg,#d99a2b,var(--gold-2),#d99a2b);color:#3a2606;text-align:center;font-family:var(--font-display);letter-spacing:.1em;font-size:.92rem;padding:.5rem;border-radius:10px;margin-top:.85rem;box-shadow:0 6px 14px rgba(217,154,43,.35)}
+.card-foot{padding:1rem 1.4rem 1.4rem}
+.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;border-top:1px dashed #d8c99c;padding-top:1rem}
+.price-label{display:block;font-size:.64rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#8a6a1c}
+.price{font-family:var(--font-display);font-size:2.05rem;color:var(--green-800);line-height:1.1}
+.price-unit{font-size:.74rem;font-weight:600;color:var(--ink-soft);text-align:right}
+.controls{display:flex;gap:.75rem;margin-top:.95rem}
+.stepper{display:flex;align-items:center;background:#fff;border:2px solid #d8c99c;border-radius:999px;overflow:hidden;flex:0 0 auto}
+.stepper button{width:42px;height:46px;border:0;background:transparent;font-size:1.25rem;font-weight:700;color:var(--green-800);cursor:pointer;transition:background .2s}
+.stepper button:hover{background:var(--cream-2)}
+.stepper output{min-width:26px;text-align:center;font-weight:800;font-size:1rem;display:inline-block}
+.stepper.sm button{width:32px;height:34px;font-size:1rem}
+.stepper.sm output{min-width:20px;font-size:.9rem}
+.add-btn{flex:1;border:0;border-radius:999px;cursor:pointer;font-family:var(--font-body);font-weight:800;font-size:.95rem;color:var(--cream);background:linear-gradient(135deg,var(--green-600),var(--green-800));padding:.7rem;box-shadow:0 8px 18px rgba(14,74,36,.3);transition:.25s}
+.add-btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(14,74,36,.4)}
+.add-btn.added{background:linear-gradient(135deg,var(--gold-3),var(--gold));color:#3a2606}
+.menu-note{text-align:center;margin-top:2.2rem;font-size:.85rem;color:#cfd8c4}
+
+/* ============ HOW IT WORKS ============ */
+.how{background:var(--cream-2)}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;position:relative}
+.how-grid::before{content:'';position:absolute;top:64px;left:12%;right:12%;border-top:3px dashed #d3c193;z-index:0}
+.step-card{position:relative;z-index:1;background:#fff;border-radius:22px;padding:1.7rem 1.5rem;box-shadow:0 14px 34px rgba(18,43,25,.09);transition:transform .25s}
+.step-card:hover{transform:translateY(-5px)}
+.step-num{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:#3a2606;font-family:var(--font-display);font-size:1.5rem;margin-bottom:1rem;box-shadow:0 0 0 6px var(--cream-2),0 8px 18px rgba(217,154,43,.4)}
+.step-card h3{font-size:1.15rem;text-transform:uppercase;color:var(--green-900);margin-bottom:.35rem}
+.step-card p{font-size:.9rem;color:var(--ink-soft)}
+
+/* ============ ABOUT ============ */
+.about{background:radial-gradient(700px 400px at 10% 10%,rgba(217,165,58,.12),transparent 55%),linear-gradient(160deg,var(--green-900),var(--green-950));color:var(--cream);position:relative}
+.about::before{content:'';position:absolute;inset:0;background:var(--pattern);pointer-events:none}
+.about .container{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.about .script{font-size:1.6rem}
+.about h2{font-size:clamp(1.9rem,4vw,2.6rem);text-transform:uppercase;margin:.2rem 0 1rem}
+.about p{color:#dfe5d3;font-size:.96rem;margin-bottom:.9rem}
+.about-facts{background:var(--cream);color:var(--ink);border-radius:24px;padding:1.8rem;box-shadow:var(--shadow-lg,0 24px 60px rgba(0,0,0,.4));border-top:5px solid var(--gold)}
+.about-facts h3{font-size:1.15rem;text-transform:uppercase;color:var(--green-900);margin-bottom:.9rem}
+.about-facts ul{list-style:none;display:grid;gap:.65rem}
+.about-facts li{display:flex;gap:.6rem;font-size:.9rem;font-weight:500;align-items:flex-start}
+.about-facts li b{flex:0 0 22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:#3a2606;font-size:.72rem;display:grid;place-items:center;margin-top:.15rem}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.info-card{background:#fff;border-radius:22px;padding:1.7rem;box-shadow:0 14px 34px rgba(18,43,25,.09);border-left:5px solid var(--gold)}
+.info-card h3{font-size:1.15rem;text-transform:uppercase;color:var(--green-900);display:flex;gap:.55rem;align-items:center;margin-bottom:.7rem}
+.info-card p{font-size:.92rem;color:var(--ink-soft)}
+.contact-lines{display:grid;gap:.55rem;margin-top:.9rem}
+.contact-lines a{display:flex;gap:.6rem;align-items:center;color:var(--ink);text-decoration:none;font-weight:600;font-size:.93rem;padding:.55rem .8rem;background:var(--cream);border-radius:12px;border:1px solid var(--cream-3);transition:.2s}
+.contact-lines a:hover{border-color:var(--gold);background:#fff}
+.contact-lines .tag{margin-left:auto;font-size:.64rem;font-weight:800;letter-spacing:.08em;padding:.22rem .6rem;border-radius:999px;background:#e5f1de;color:#186133;text-transform:uppercase}
+.contact-lines .tag.wa{background:#dcf7e5;color:#0e7a3c}
+.cta-banner{margin-top:1.6rem;border-radius:24px;padding:1.9rem 1.6rem;display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;justify-content:space-between;background:linear-gradient(120deg,var(--gold-2),#e8b84b 55%,#d99a2b);box-shadow:0 20px 44px rgba(217,154,43,.35)}
+.cta-banner h3{font-size:clamp(1.25rem,2.6vw,1.7rem);text-transform:uppercase;color:#3a2606}
+.cta-banner .script{color:#6b4a08;font-size:1.25rem;display:block;margin-bottom:.15rem}
+.cta-banner .btn{background:linear-gradient(135deg,var(--green-600),var(--green-900));color:#fff}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--green-950);color:#cfd8c4;padding:56px 0 0;border-top:4px solid var(--gold)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:2.2rem;padding-bottom:2.4rem}
+.footer .brand-name{font-size:1.15rem}
+.footer-script{font-family:var(--font-script);color:var(--gold-2);font-size:1.4rem;margin-top:.7rem}
+.footer h4{font-family:var(--font-body);font-weight:800;color:var(--cream);font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9rem}
+.footer ul{list-style:none;display:grid;gap:.45rem}
+.footer a{color:#cfd8c4;text-decoration:none;font-size:.9rem}
+.footer a:hover{color:var(--gold-2)}
+.footer-bottom{border-top:1px solid rgba(217,165,58,.2);padding:1.1rem 0;text-align:center;font-size:.78rem;color:#8fa08c}
+
+/* ============ OVERLAY / DRAWER / MODAL / TOASTS ============ */
+.overlay{position:fixed;inset:0;background:rgba(3,14,7,.62);backdrop-filter:blur(3px);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.show{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;height:100dvh;width:min(430px,100%);background:var(--cream);z-index:80;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .38s cubic-bezier(.22,1,.36,1);box-shadow:-24px 0 60px rgba(0,0,0,.4)}
+.cart-drawer.open{transform:translateX(0)}
+.drawer-head{background:linear-gradient(135deg,var(--green-800),var(--green-950));color:var(--cream);padding:1.15rem 1.4rem;display:flex;align-items:center;justify-content:space-between}
+.drawer-head h3{font-size:1.25rem;text-transform:uppercase;letter-spacing:.05em}
+.drawer-head .script{display:block;font-size:1.1rem;margin-top:-2px}
+.close-x{background:rgba(255,255,255,.12);border:0;color:#fff;width:38px;height:38px;border-radius:50%;font-size:1.05rem;cursor:pointer;transition:.2s}
+.close-x:hover{background:var(--red)}
+.cart-items{flex:1;overflow-y:auto;padding:1rem 1.4rem}
+.cart-item{display:grid;grid-template-columns:54px 1fr auto;gap:.85rem;align-items:center;padding:.95rem 0;border-bottom:1px dashed #d8c99c}
+.ci-thumb{width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#fff8e8,var(--cream-3));display:grid;place-items:center;font-size:1.7rem;border:2px solid #fff;outline:2px solid var(--gold)}
+.ci-name{font-weight:700;font-size:.93rem;color:var(--green-900)}
+.ci-unit{font-size:.75rem;color:var(--ink-soft);margin-bottom:.3rem}
+.ci-right{text-align:right;display:grid;gap:.35rem;justify-items:end}
+.ci-right strong{color:var(--green-800)}
+.ci-remove{background:none;border:0;color:#b08a45;cursor:pointer;font-size:.9rem;padding:.15rem .35rem;border-radius:8px}
+.ci-remove:hover{color:var(--red);background:#fbe9e4}
+.cart-empty{text-align:center;padding:3.2rem 1rem;display:grid;gap:.5rem;justify-items:center}
+.cart-empty span{font-size:3.4rem}
+.cart-empty p{font-weight:700;color:var(--green-900)}
+.cart-empty .sub{font-weight:400;color:var(--ink-soft);font-size:.9rem}
+.cart-empty .btn{margin-top:.8rem}
+.drawer-foot{border-top:2px dashed #d8c99c;padding:1.1rem 1.4rem calc(1.1rem + env(safe-area-inset-bottom));background:#fff}
+.total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem}
+.total-row strong{font-family:var(--font-display);font-size:1.5rem;color:var(--green-800)}
+.total-row.grand strong{font-size:1.75rem}
+.drawer-hint{font-size:.75rem;color:var(--ink-soft);margin:.2rem 0 .9rem}
+
+.checkout-modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:1rem}
+.modal-card{background:var(--cream);border-radius:26px;width:min(660px,100%);max-height:min(92dvh,100%);overflow-y:auto;box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.modal-head{position:sticky;top:0;z-index:2;background:linear-gradient(135deg,var(--green-800),var(--green-950));color:var(--cream);padding:1.15rem 1.5rem;display:flex;align-items:center;gap:1rem}
+.modal-head .script{font-size:1.05rem;display:block;margin-top:-3px}
+.modal-head h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em}
+.step-dots{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.step-dots span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:800;background:rgba(255,255,255,.14);color:#cfd8c4;border:1px solid rgba(255,255,255,.25)}
+.step-dots span.on{background:linear-gradient(135deg,var(--gold-3),var(--gold));color:#3a2606;border-color:transparent}
+.modal-body{padding:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+.field{margin-bottom:1.05rem}
+.field label{display:block;font-weight:700;font-size:.86rem;margin-bottom:.35rem;color:var(--green-900)}
+.field .opt{font-weight:500;color:var(--ink-soft);font-size:.78rem}
+.field input,.field textarea{width:100%;font:inherit;font-size:.95rem;padding:.85rem 1rem;border:2px solid #ddcfa4;border-radius:13px;background:#fff;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+.field textarea{resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--green-700);box-shadow:0 0 0 4px rgba(30,122,62,.14)}
+.field.error input{border-color:var(--red);background:#fff8f6}
+.err-msg{display:none;color:var(--red);font-size:.76rem;font-weight:600;margin-top:.3rem}
+.field.error .err-msg,.type-error.show{display:block}
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.type-card{position:relative;display:flex;gap:.75rem;align-items:flex-start;background:#fff;border:2px solid #ddcfa4;border-radius:16px;padding:.95rem 1rem;cursor:pointer;transition:.2s}
+.type-card input{position:absolute;opacity:0;pointer-events:none}
+.type-card:hover{border-color:var(--gold)}
+.type-card.selected{border-color:var(--green-700);background:#f0f7ec;box-shadow:0 0 0 3px rgba(30,122,62,.15)}
+.type-emoji{font-size:1.55rem;line-height:1.2}
+.type-title{display:block;font-weight:800;font-size:.98rem;color:var(--green-900)}
+.type-sub{display:block;font-size:.75rem;color:var(--ink-soft);margin-top:.15rem}
+.fee-tag{display:inline-block;font-size:.68rem;font-weight:800;padding:.14rem .5rem;border-radius:999px;background:var(--cream-2);color:#6b5416;margin-left:.3rem;white-space:nowrap}
+.fee-tag.free{background:#dcf7e5;color:#0e7a3c}
+.totals-strip{background:#fff;border:2px dashed #d8c99c;border-radius:15px;padding:.95rem 1.15rem;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;align-items:center;margin:1.15rem 0 .5rem}
+.ts-cell span{display:block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8a6a1c}
+.ts-cell strong{font-size:1.05rem;color:var(--green-900)}
+.ts-cell.grand{margin-left:auto;text-align:right}
+.ts-cell.grand strong{font-family:var(--font-display);font-size:1.45rem;color:var(--green-800)}
+.type-hint{font-size:.8rem;color:var(--ink-soft);margin-bottom:1.1rem}
+.type-hint b{color:var(--green-800)}
+.summary{background:#fff;border:1px solid #e7dab2;border-radius:18px;padding:1.3rem 1.4rem}
+.sum-head{font-family:var(--font-display);text-align:center;letter-spacing:.06em;color:var(--green-900);font-size:1.05rem;border-bottom:2px dashed #d8c99c;padding-bottom:.7rem;margin-bottom:.7rem}
+.sum-row{display:flex;justify-content:space-between;gap:1rem;font-size:.93rem;padding:.28rem 0}
+.sum-row.total{border-top:1px dashed #d8c99c;margin-top:.5rem;padding-top:.65rem;font-weight:800;color:var(--green-900)}
+.sum-row.grand{font-weight:800;font-size:1.08rem;color:var(--green-800);border-top:2px dashed #d8c99c;margin-top:.5rem;padding-top:.7rem}
+.sum-row.grand strong,.sum-row.total strong{font-family:var(--font-display)}
+.sum-type{background:var(--cream);border-radius:12px;padding:.75rem .95rem;margin:.7rem 0;font-size:.88rem}
+.sum-type-head{font-weight:800;color:var(--green-900)}
+.sum-addr{color:var(--ink-soft);font-size:.83rem;margin-top:.15rem}
+.sum-customer{border-top:1px dashed #d8c99c;margin-top:.7rem;padding-top:.7rem;font-size:.88rem;display:grid;gap:.2rem;color:var(--ink-soft)}
+.review-actions{display:flex;gap:.8rem;margin-top:1.3rem;flex-wrap:wrap}
+.review-actions .btn{flex:1;min-width:200px}
+.review-note{text-align:center;font-size:.78rem;color:var(--ink-soft);margin-top:.9rem}
+.step-success{text-align:center;padding:1.6rem .6rem;display:grid;justify-items:center;gap:.6rem}
+.success-check{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,#2bb45c,#128c46);color:#fff;font-size:2.6rem;display:grid;place-items:center;box-shadow:0 0 0 10px rgba(27,165,82,.15),0 16px 34px rgba(18,140,70,.4);animation:pop .5s}
+.step-success h3{font-size:1.4rem;text-transform:uppercase;color:var(--green-900)}
+.step-success p{max-width:40ch;color:var(--ink-soft);font-size:.93rem}
+.step-success .btn{margin-top:.6rem}
+
+.toast-wrap{position:fixed;top:88px;left:50%;transform:translateX(-50%);z-index:120;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;width:max-content;max-width:92vw}
+.toast{background:linear-gradient(135deg,var(--green-800),var(--green-950));color:var(--cream);border:1px solid rgba(217,165,58,.5);padding:.7rem 1.25rem;border-radius:999px;font-size:.88rem;font-weight:600;box-shadow:0 14px 34px rgba(0,0,0,.4);display:flex;gap:.55rem;align-items:center;animation:toastIn .35s cubic-bezier(.22,1,.36,1);max-width:92vw}
+.toast.out{opacity:0;transform:translateY(-10px);transition:.3s}
+@keyframes toastIn{from{opacity:0;transform:translateY(-14px) scale(.94)}}
+
+/* ============ MOBILE FLOATING ORDER BAR ============ */
+.mobile-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:65;padding:.65rem .9rem calc(.65rem + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(4,23,12,0),rgba(4,23,12,.5) 45%);pointer-events:none}
+.mobile-bar button{pointer-events:auto;width:100%;border:0;border-radius:999px;padding:1rem;font-family:var(--font-body);font-weight:800;font-size:1rem;letter-spacing:.03em;color:#3a2606;background:linear-gradient(135deg,var(--gold-3),var(--gold-2) 50%,#d99a2b);box-shadow:0 14px 34px rgba(0,0,0,.45);cursor:pointer;display:flex;justify-content:center;gap:.6rem;align-items:center}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .promise-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-desc{margin-inline:auto}
+  .hero-ctas,.hero-chips{justify-content:center}
+  .hero-art{min-height:340px;order:2}
+  .about .container{grid-template-columns:1fr;gap:2rem}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .menu-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
+  .how-grid::before{display:none}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  html{scroll-padding-top:80px}
+  .main-nav{position:fixed;top:74px;left:0;right:0;background:rgba(6,26,14,.98);backdrop-filter:blur(10px);flex-direction:column;gap:0;padding:.6rem 0 1rem;border-bottom:3px solid var(--gold);transform:translateY(-130%);transition:transform .35s cubic-bezier(.22,1,.36,1);z-index:-1}
+  .nav-open .main-nav{transform:translateY(0)}
+  .main-nav a{padding:.85rem 6%;border-bottom:1px solid rgba(255,255,255,.06);font-size:1rem}
+  .hamburger{display:flex}
+  .cart-btn span.label{display:none}
+  .cart-btn{padding:.55rem .8rem}
+  .mobile-bar{display:block}
+  body{padding-bottom:78px}
+  .section{padding:60px 0}
+  .form-grid{grid-template-columns:1fr}
+  .type-grid{grid-template-columns:1fr}
+  .food-pepper,.chip-drink{display:none}
+  .modal-body{padding:1.15rem}
+  .review-actions .btn{min-width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="brand" aria-label="Northern Flavours Restaurant — home">
+      <span class="brand-mark" aria-hidden="true">NF</span>
+      <span>
+        <span class="brand-name">Northern Flavours</span>
+        <span class="brand-sub">Restaurant · Dutse</span>
+      </span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#how">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" id="cartOpenBtn" aria-label="Open your order">
+        🛍️ <span class="label">Order</span>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">📍 <span class="cfg-addr-short">Gajambe Plaza, Talwawa · Dutse</span></span>
+      <p class="hero-script">Taste the Difference</p>
+      <h1>Delicious Meals, <span class="accent">Delivered</span> to Your Door</h1>
+      <p class="hero-desc">Fresh, tasty and satisfying meals — lunch &amp; dinner specials, the best shawarma in town and family packages made for sharing. Freshly prepared by our talented chefs at Gajambe Plaza, Dutse, and delivered hot to your doorstep in about 20 minutes.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn btn-gold">🛍️ ORDER NOW</a>
+        <a href="#menu" class="btn btn-ghost">VIEW MENU</a>
+      </div>
+      <div class="hero-chips">
+        <span>🍛 Jollof &amp; grilled chicken</span>
+        <span>🌯 Best shawarma in town!</span>
+        <span>👨‍👩‍👧 Family packages</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="plate">
+        <span class="food food-rice">🍚</span>
+        <span class="food food-chicken">🍗</span>
+        <span class="food food-salad">🥗</span>
+        <span class="food food-pepper">🌶️</span>
+      </div>
+      <span class="float-chip chip-shawarma">🌯</span>
+      <span class="float-chip chip-drink">🥤</span>
+      <span class="float-chip chip-20">🛵 20 min delivery</span>
+      <span class="seal">NF</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ORDER FROM US ================= -->
+<section class="section promise">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script">Fast · Reliable · Safe</span>
+      <h2>We Deliver to You!</h2>
+      <p class="section-sub">Order online — click &amp; receive. Delivery in 20 minutes only, straight to your doorstep.</p>
+    </div>
+    <div class="promise-grid">
+      <div class="promise-card reveal"><div class="promise-icon">🍳</div><h3>Freshly Prepared Meals</h3><p>Cooked fresh to order by our talented chefs &amp; professional cooks.</p></div>
+      <div class="promise-card reveal"><div class="promise-icon">🛵</div><h3>Fast Delivery</h3><p>Click &amp; receive — delivery in 20 minutes only, on-time every time.</p></div>
+      <div class="promise-card reveal"><div class="promise-icon">🛡️</div><h3>Safe &amp; Reliable Service</h3><p>Your meal arrives safely packed, hot and exactly as you ordered it.</p></div>
+      <div class="promise-card reveal"><div class="promise-icon">📲</div><h3>Convenient Ordering</h3><p>Order in minutes on WhatsApp — no app downloads, no sign-ups.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="section menu" id="menu">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script">Our Menu</span>
+      <h2>Fresh · Tasty · Satisfying</h2>
+      <p class="section-sub">Dine in · Take away · Delivered to your door. All prices in Nigerian Naira (₦).</p>
+    </div>
+    <div class="menu-grid" id="menuGrid"><!-- menu cards rendered by JS --></div>
+    <p class="menu-note reveal">Tap <b>+ Add to Order</b> on any item, then send your order to us on WhatsApp. 🛵 Delivery in 20 minutes only.</p>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section how" id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script">So simple!</span>
+      <h2>How It Works</h2>
+      <p class="section-sub">From craving to confirmation in less than 3 minutes — no account needed.</p>
+    </div>
+    <div class="how-grid">
+      <div class="step-card reveal"><span class="step-num">1</span><h3>Choose Your Meal</h3><p>Browse the Northern Flavours menu and select what you want.</p></div>
+      <div class="step-card reveal"><span class="step-num">2</span><h3>Enter Your Details</h3><p>Provide your name, phone number and delivery/pickup information.</p></div>
+      <div class="step-card reveal"><span class="step-num">3</span><h3>Send Your Order</h3><p>Review the order and send it directly to Northern Flavours through WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="reveal">
+      <span class="script">Taste the Northern Flavours!</span>
+      <h2>About Northern Flavours</h2>
+      <p>Northern Flavours Restaurant is your home for delicious, freshly prepared meals in Dutse, Jigawa State. From our kitchen at Gajambe Plaza, our talented chefs &amp; professional cooks serve jollof rice, grilled chicken, shawarma and generous family packages — made to order, just the way you like it.</p>
+      <p>Enjoy your meal your way: <b>dine in, take away, or let us deliver to your doorstep in about 20 minutes.</b></p>
+      <p class="script" style="font-size:1.5rem;margin-top:1.2rem">Thank you for choosing Northern Flavours! 🧡</p>
+    </div>
+    <div class="about-facts reveal">
+      <h3>Why Our Customers Love Us</h3>
+      <ul>
+        <li><b>✓</b> Freshly prepared meals by talented chefs &amp; professional cooks</li>
+        <li><b>✓</b> Dine-in · Takeaway · Delivery</li>
+        <li><b>✓</b> Family Package that serves 4–6 people — made for sharing!</li>
+        <li><b>✓</b> Home of the <b>Best Shawarma in Town!</b></li>
+        <li><b>✓</b> Fast · Reliable · Safe delivery in 20 minutes only</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / FIND US ================= -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script">Find Us</span>
+      <h2>Our Location &amp; Contact</h2>
+      <p class="section-sub">Walk in for dine-in or takeaway, or order ahead on WhatsApp.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card reveal">
+        <h3>📍 Visit Us</h3>
+        <p><b>Gajambe Plaza</b><br>Talwawa<br>Dutse, Jigawa State</p>
+        <div class="contact-lines">
+          <a href="https://www.google.com/maps/search/?api=1&query=Gajambe+Plaza+Dutse+Jigawa+State" target="_blank" rel="noopener">🗺️ Open in Google Maps <span class="tag">Directions</span></a>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <h3>📞 Order &amp; Contact</h3>
+        <p>Call or message us — we're ready to take your order.</p>
+        <div class="contact-lines">
+          <a href="tel:09068022567">📞 0906 802 2567 <span class="tag">Call</span></a>
+          <a href="tel:08131393402">📞 0813 139 3402 <span class="tag">Call</span></a>
+          <a href="https://wa.me/2348143751471" target="_blank" rel="noopener">💬 0814 375 1471 <span class="tag wa">WhatsApp Orders</span></a>
+          <a href="https://wa.me/2348143751471?text=Hello%20Northern%20Flavours!%20%F0%9F%91%8B%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">🛵 Order in 20 minutes <span class="tag wa">Click &amp; Receive</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-banner reveal">
+      <div>
+        <span class="script">Hungry right now?</span>
+        <h3>Order on WhatsApp — 0814 375 1471</h3>
+      </div>
+      <a href="#menu" class="btn">🍽️ BUILD MY ORDER</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand" aria-label="Northern Flavours home">
+          <span class="brand-mark" aria-hidden="true">NF</span>
+          <span><span class="brand-name">Northern Flavours</span><span class="brand-sub">Restaurant · Dutse</span></span>
+        </a>
+        <p class="footer-script">Thank you for choosing Northern Flavours!</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📍 <span class="cfg-addr">Gajambe Plaza, Talwawa, Dutse, Jigawa State</span></li>
+          <li>📞 <a href="tel:09068022567">0906 802 2567</a> · <a href="tel:08131393402">0813 139 3402</a></li>
+          <li>💬 WhatsApp Orders: <a href="https://wa.me/2348143751471" target="_blank" rel="noopener">0814 375 1471</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="year">2025</span> Northern Flavours Restaurant · Gajambe Plaza, Dutse, Jigawa State · Taste the Difference</div>
+</footer>
+
+<!-- ================= OVERLAY / CART DRAWER ================= -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your order">
+  <div class="drawer-head">
+    <div><h3>Your Order</h3><span class="script" id="cartTitleCount">0 items</span></div>
+    <button class="close-x" id="closeCartBtn" aria-label="Close order panel">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total-row grand"><span>Food Total</span><strong id="cartFoodTotal">₦0</strong></div>
+    <p class="drawer-hint">Delivery or pickup fee is calculated at the next step.</p>
+    <button class="btn btn-green btn-block" id="proceedBtn" disabled>Proceed to Order →</button>
+  </div>
+</aside>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout" hidden>
+  <div class="modal-card">
+    <div class="modal-head">
+      <div><span class="script">Northern Flavours</span><h3 id="modalTitle">Your Details</h3></div>
+      <div class="step-dots" id="stepDots"><span class="on" id="dot1">1</span><span id="dot2">2</span><span id="dot3">3</span></div>
+      <button class="close-x" id="closeCheckoutBtn" aria-label="Close checkout">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- STEP 1: DETAILS -->
+      <section id="stepDetails">
+        <form id="checkoutForm" novalidate>
+          <div class="form-grid">
+            <div class="field" id="fName">
+              <label for="custName">Full Name *</label>
+              <input type="text" id="custName" placeholder="e.g. Ahmed Bello" autocomplete="name">
+              <p class="err-msg">Please enter your full name.</p>
+            </div>
+            <div class="field" id="fPhone">
+              <label for="custPhone">Phone Number *</label>
+              <input type="tel" id="custPhone" placeholder="e.g. 0803 123 4567" inputmode="tel" autocomplete="tel">
+              <p class="err-msg">Enter a valid Nigerian phone number (e.g. 08031234567).</p>
+            </div>
+          </div>
+
+          <div class="field" id="fType">
+            <label>Order Type * <span class="opt">— please choose one</span></label>
+            <div class="type-grid">
+              <label class="type-card" id="typeCardDelivery">
+                <input type="radio" name="orderType" value="delivery">
+                <span class="type-emoji">🚚</span>
+                <span><span class="type-title">DELIVERY</span><span class="type-sub">We bring it to your address <b class="fee-tag" id="feeTagDelivery">+ fee</b></span></span>
+              </label>
+              <label class="type-card" id="typeCardPickup">
+                <input type="radio" name="orderType" value="pickup">
+                <span class="type-emoji">🏪</span>
+                <span><span class="type-title">PICKUP</span><span class="type-sub">Collect at our plaza <b class="fee-tag free">₦0 — no charge</b></span></span>
+              </label>
+            </div>
+            <p class="err-msg" id="typeErr">Please choose Delivery or Pickup.</p>
+          </div>
+
+          <div class="field" id="fAddress" hidden>
+            <label for="custAddress">Delivery Address *</label>
+            <input type="text" id="custAddress" placeholder="e.g. Federal University Dutse">
+            <p class="err-msg">Please enter your delivery address.</p>
+          </div>
+
+          <div class="field">
+            <label for="custNote">Additional Note <span class="opt">(optional)</span></label>
+            <textarea id="custNote" rows="2" placeholder="e.g. Less pepper please · deliver around 6pm"></textarea>
+          </div>
+
+          <div class="totals-strip">
+            <div class="ts-cell"><span>Food Total</span><strong id="tFood">₦0</strong></div>
+            <div class="ts-cell"><span>Delivery Fee</span><strong id="tFee">—</strong></div>
+            <div class="ts-cell grand"><span>Grand Total</span><strong id="tGrand">₦0</strong></div>
+          </div>
+          <p class="type-hint" id="typeHint">👆 Choose <b>Delivery</b> or <b>Pickup</b> above to see your full total.</p>
+
+          <button type="submit" class="btn btn-green btn-block">Review Order →</button>
+        </form>
+      </section>
+
+      <!-- STEP 2: REVIEW -->
+      <section id="stepReview" hidden>
+        <div class="summary" id="reviewBody"></div>
+        <div class="review-actions">
+          <button class="btn btn-outline-green" id="editDetailsBtn">← Edit Details</button>
+          <button class="btn btn-wa" id="confirmSendBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            CONFIRM &amp; SEND ON WHATSAPP
+          </button>
+        </div>
+        <p class="review-note">WhatsApp will open with your order ready — just press <b>SEND</b> to confirm.</p>
+      </section>
+
+      <!-- STEP 3: SUCCESS -->
+      <section class="step-success" id="stepSuccess" hidden>
+        <div class="success-check">✓</div>
+        <h3>Almost Done!</h3>
+        <p>WhatsApp is opening with your complete order details. Please press <b>SEND</b> in WhatsApp so our kitchen receives your order.</p>
+        <a class="btn btn-wa" id="waFallback" href="#" target="_blank" rel="noopener">💬 Open WhatsApp Again</a>
+        <button class="btn btn-plain" id="newOrderBtn">Done — Place a New Order</button>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile floating order bar -->
+<div class="mobile-bar" id="mobileBar">
+  <button id="mobileBarBtn">🍽️ ORDER NOW</button>
+</div>
+
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   CONFIG — the restaurant owner can edit everything here
+   ===================================================================== */
+const CONFIG = {
+  // WhatsApp number in INTERNATIONAL format (no +, no spaces): 0814 375 1471
+  whatsappNumber: '2348143751471',
+
+  // Delivery fee in Naira — change this single number any time (set 0 for free delivery)
+  deliveryFee: 1000,
+
+  // Restaurant address (used for pickup messaging)
+  address: 'Gajambe Plaza, Talwawa, Dutse, Jigawa State',
+  addressShort: 'Gajambe Plaza, Talwawa · Dutse'
+};
+
+/* =====================================================================
+   MENU — exactly as printed on the flyer (no invented prices)
+   ===================================================================== */
+const MENU = [
+  {
+    id:'lunch', name:'Lunch Special', emoji:'🍛',
+    priceNote:'Starting from', price:2500, unit:'per plate',
+    tagline:'Fresh · Tasty · Satisfying!',
+    desc:'Delicious meals, perfect for your lunch break — served hot, with all the flavour of home.',
+    meta:'🍽️ Dine-in · Takeaway · Delivery'
+  },
+  {
+    id:'family', name:'Family Package', emoji:'🥘',
+    priceNote:'Only', price:18000, unit:'serves 4–6 people',
+    tagline:'Made for sharing!',
+    desc:'One generous pack with everything your family needs for a proper feast.',
+    badge:'Best Value!', badgeGold:true,
+    serves:'Serves approximately 4–6 people',
+    includes:['Jollof Rice / Fried Rice','Chicken / Beef','Coleslaw','Plantain','Drinks']
+  },
+  {
+    id:'shawarma', name:'Shawarma Special', emoji:'🌯',
+    priceNote:'Now only', price:3000, unit:'each',
+    tagline:'Juicy · Fresh · Bigger Filling',
+    desc:'Juicy chicken, fresh veggies and our special sauce — wrapped fresh with a bigger filling.',
+    chips:['Juicy Chicken','Fresh Veggies','Special Sauce','Bigger Filling'],
+    ribbon:'BEST SHAWARMA IN TOWN!'
+  },
+  {
+    id:'dinner', name:'Dinner Special', emoji:'🍖',
+    priceNote:'Meals from', price:2500, unit:'per plate',
+    tagline:'End your day with good food!',
+    desc:'Tasty evening meals with great portions — made to order, just the way you like it.',
+    chips:['Tasty Meals','Great Portions','Made to Order','Convenient Delivery']
+  }
+];
+
+/* ============ Helpers & state ============ */
+const $ = id => document.getElementById(id);
+const fmt = n => '₦' + n.toLocaleString('en-NG');
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem('nf-cart')) || {}; } catch(e) { cart = {}; }
+const saveCart = () => { try { localStorage.setItem('nf-cart', JSON.stringify(cart)); } catch(e){} };
+const menuById = id => MENU.find(m => m.id === id);
+const cartEntries = () => Object.entries(cart).map(([id,qty]) => ({...menuById(id), qty})).filter(e => e.id && e.qty > 0);
+const foodTotal = () => cartEntries().reduce((s,e) => s + e.price * e.qty, 0);
+const cartCount = () => cartEntries().reduce((s,e) => s + e.qty, 0);
+
+function toast(msg, icon='🛍️'){
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `<span>${icon}</span><span>${msg}</span>`;
+  $('toastWrap').appendChild(t);
+  setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 320); }, 2400);
+}
+
+/* ============ Render menu cards ============ */
+function renderMenu(){
+  $('menuGrid').innerHTML = MENU.map((item, i) => `
+    <article class="menu-card reveal" style="transition-delay:${i*80}ms">
+      <div class="card-media">
+        ${item.badge ? `<span class="badge ${item.badgeGold ? 'gold' : ''}">${item.badge}</span>` : ''}
+        <span class="corner-num">${i + 1}</span>
+        <div class="plate-sm"><span>${item.emoji}</span></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tagline">${item.tagline}</p>
+        <h3>${item.name}</h3>
+        <p class="card-desc">${item.desc}</p>
+        ${item.serves ? `<span class="serves">👨‍👩‍👧‍👦 ${item.serves}</span>` : ''}
+        ${item.includes ? `<ul class="includes">${item.includes.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}
+        ${item.chips ? `<div class="chips">${item.chips.map(c => `<span>${c}</span>`).join('')}</div>` : ''}
+        ${item.meta ? `<p class="meta-line">${item.meta}</p>` : ''}
+        ${item.ribbon ? `<div class="ribbon">⭐ ${item.ribbon} ⭐</div>` : ''}
+      </div>
+      <div class="card-foot">
+        <div class="price-row">
+          <div><span class="price-label">${item.priceNote}</span><span class="price">${fmt(item.price)}</span></div>
+          <span class="price-unit">${item.unit || ''}</span>
+        </div>
+        <div class="controls">
+          <div class="stepper">
+            <button type="button" class="step-minus" aria-label="Decrease quantity of ${item.name}">−</button>
+            <output class="card-qty" aria-live="polite">1</output>
+            <button type="button" class="step-plus" aria-label="Increase quantity of ${item.name}">+</button>
+          </div>
+          <button type="button" class="add-btn" data-id="${item.id}">＋ Add to Order</button>
+        </div>
+      </div>
+    </article>`).join('');
+}
+
+/* Menu card interactions (delegated) */
+ $('menuGrid').addEventListener('click', e => {
+  const plus = e.target.closest('.step-plus'), minus = e.target.closest('.step-minus'), add = e.target.closest('.add-btn');
+  if (plus || minus){
+    const out = e.target.closest('.stepper').querySelector('.card-qty');
+    let q = parseInt(out.textContent, 10) + (plus ? 1 : -1);
+    out.textContent = Math.min(99, Math.max(1, q));
+  }
+  if (add){
+    const id = add.dataset.id;
+    const qty = parseInt(add.closest('.card-foot').querySelector('.card-qty').textContent, 10);
+    addToCart(id, qty);
+    add.closest('.card-foot').querySelector('.card-qty').textContent = 1;
+    const old = add.innerHTML;
+    add.classList.add('added'); add.innerHTML = '✓ Added!';
+    setTimeout(() => { add.classList.remove('added'); add.innerHTML = old; }, 1200);
+  }
+});
+
+/* ============ Cart ============ */
+function addToCart(id, qty){
+  cart[id] = (cart[id] || 0) + qty;
+  saveCart(); renderCart();
+  toast(`${menuById(id).name} ×${qty} added to your order`);
+}
+
+function renderCart(){
+  const entries = cartEntries(), count = cartCount(), food = foodTotal();
+
+  // header badge
+  const badge = $('cartCount');
+  badge.hidden = count === 0;
+  badge.textContent = count;
+  badge.classList.remove('pop'); void badge.offsetWidth; badge.classList.add('pop');
+
+  // drawer title
+  $('cartTitleCount').textContent = count === 0 ? 'No items yet' : `${count} item${count > 1 ? 's' : ''}`;
+
+  // items list
+  $('cartItems').innerHTML = entries.length === 0
+    ? `<div class="cart-empty"><span>🍽️</span><p>Your order is empty</p><p class="sub">Add something delicious from the menu.</p><button class="btn btn-green" id="browseBtn">Browse the Menu</button></div>`
+    : entries.map(e => `
+      <div class="cart-item">
+        <div class="ci-thumb">${e.emoji}</div>
+        <div>
+          <p class="ci-name">${e.name}</p>
+          <p class="ci-unit">${fmt(e.price)} each</p>
+          <div class="stepper sm" data-id="${e.id}">
+            <button class="step-minus" aria-label="Decrease ${e.name}">−</button>
+            <output>${e.qty}</output>
+            <button class="step-plus" aria-label="Increase ${e.name}">+</button>
+          </div>
+        </div>
+        <div class="ci-right">
+          <strong>${fmt(e.price * e.qty)}</strong>
+          <button class="ci-remove" data-id="${e.id}" aria-label="Remove ${e.name}">✕ Remove</button>
+        </div>
+      </div>`).join('');
+
+  $('cartFoodTotal').textContent = fmt(food);
+  $('proceedBtn').disabled = entries.length === 0;
+
+  // mobile floating bar
+  $('mobileBarBtn').innerHTML = count > 0
+    ? `🧺 View Order · ${count} item${count > 1 ? 's' : ''} · ${fmt(food)}`
+    : '🍽️ ORDER NOW';
+
+  updateDetailsTotals();
+}
+
+ $('cartItems').addEventListener('click', e => {
+  if (e.target.closest('#browseBtn')){ closeDrawer(); document.getElementById('menu').scrollIntoView({behavior:'smooth'}); return; }
+  const plus = e.target.closest('.step-plus'), minus = e.target.closest('.step-minus'), rem = e.target.closest('.ci-remove');
+  if (plus || minus){
+    const id = e.target.closest('.stepper').dataset.id;
+    cart[id] = (cart[id] || 0) + (plus ? 1 : -1);
+    if (cart[id] <= 0) delete cart[id];
+    saveCart(); renderCart();
+  }
+  if (rem){
+    const name = menuById(rem.dataset.id).name;
+    delete cart[rem.dataset.id];
+    saveCart(); renderCart();
+    toast(`${name} removed from your order`, '🗑️');
+  }
+});
+
+/* ============ Drawer / overlay / scroll lock ============ */
+const drawer = $('cartDrawer'), modal = $('checkoutModal'), overlay = $('overlay');
+const lock = on => document.body.classList.toggle('no-scroll', on);
+
+function openDrawer(){ renderCart(); drawer.classList.add('open'); overlay.classList.add('show'); lock(true); $('closeCartBtn').focus(); }
+function closeDrawer(unlock = true){ drawer.classList.remove('open'); if (unlock && modal.hidden){ overlay.classList.remove('show'); lock(false); } }
+function openCheckout(){ modal.hidden = false; overlay.classList.add('show'); lock(true); showStep('details'); $('custName').focus(); }
+function closeCheckout(){ modal.hidden = true; overlay.classList.remove('show'); lock(false); }
+
+ $('cartOpenBtn').addEventListener('click', openDrawer);
+ $('closeCartBtn').addEventListener('click', () => closeDrawer());
+ $('proceedBtn').addEventListener('click', () => { closeDrawer(false); openCheckout(); });
+ $('closeCheckoutBtn').addEventListener('click', closeCheckout);
+ $('newOrderBtn').addEventListener('click', closeCheckout);
+overlay.addEventListener('click', () => { if (!modal.hidden) closeCheckout(); else closeDrawer(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape'){ if (!modal.hidden) closeCheckout(); else if (drawer.classList.contains('open')) closeDrawer(); } });
+
+ $('mobileBarBtn').addEventListener('click', () => {
+  if (cartCount() > 0) openDrawer();
+  else document.getElementById('menu').scrollIntoView({behavior:'smooth'});
+});
+
+/* ============ Checkout: details step ============ */
+function getSelectedType(){
+  const r = document.querySelector('input[name="orderType"]:checked');
+  return r ? r.value : null;
+}
+
+function updateDetailsTotals(){
+  const food = foodTotal(), type = getSelectedType();
+  const fee = type === 'delivery' ? CONFIG.deliveryFee : type === 'pickup' ? 0 : null;
+  $('tFood').textContent = fmt(food);
+  $('tFee').textContent = fee === null ? '—' : fmt(fee);
+  $('tGrand').textContent = fee === null ? fmt(food) : fmt(food + fee);
+  $('feeTagDelivery').textContent = `+ ${fmt(CONFIG.deliveryFee)} fee`;
+  const hint = $('typeHint');
+  if (type === 'delivery') hint.innerHTML = `🚚 <b>Delivery selected</b> — a flat fee of <b>${fmt(CONFIG.deliveryFee)}</b> is added to your food total.`;
+  else if (type === 'pickup') hint.innerHTML = `🏪 <b>Pickup selected</b> — <b>no delivery charge!</b> Collect your order at ${CONFIG.address}.`;
+  else hint.innerHTML = '👆 Choose <b>Delivery</b> or <b>Pickup</b> above to see your full total.';
+}
+
+document.querySelectorAll('input[name="orderType"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    const type = getSelectedType();
+    $('typeCardDelivery').classList.toggle('selected', type === 'delivery');
+    $('typeCardPickup').classList.toggle('selected', type === 'pickup');
+    $('fAddress').hidden = type !== 'delivery';
+    $('fType').classList.remove('error');
+    updateDetailsTotals();
+  });
+});
+
+function setError(fieldId, on){ $(fieldId).classList.toggle('error', on); }
+
+ $('checkoutForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('custName').value.trim();
+  const phone = $('custPhone').value.trim();
+  const type = getSelectedType();
+  const address = $('custAddress').value.trim();
+
+  const phoneOk = /^(?:\+?234|0)[789]\d{9}$/.test(phone.replace(/[\s\-()+.]/g, ''));
+  const nameOk = name.length >= 2;
+  const addrOk = type !== 'delivery' || address.length >= 6;
+
+  setError('fName', !nameOk);
+  setError('fPhone', !phoneOk);
+  setError('fAddress', !addrOk);
+  $('fType').classList.toggle('error', !type);
+  $('typeErr').classList.toggle('show', !type);
+
+  if (!nameOk){ $('custName').focus(); return; }
+  if (!phoneOk){ $('custPhone').focus(); return; }
+  if (!type){ $('typeCardDelivery').scrollIntoView({behavior:'smooth', block:'center'}); return; }
+  if (!addrOk){ $('custAddress').focus(); return; }
+
+  renderReview();
+  showStep('review');
+});
+
+ $('editDetailsBtn').addEventListener('click', () => showStep('details'));
+
+/* ============ Checkout: review step ============ */
+function renderReview(){
+  const entries = cartEntries(), food = foodTotal(), type = getSelectedType();
+  const fee = type === 'delivery' ? CONFIG.deliveryFee : 0;
+  const grand = food + fee;
+  const name = $('custName').value.trim();
+  const phone = $('custPhone').value.trim();
+  const address = $('custAddress').value.trim();
+  const note = $('custNote').value.trim();
+
+  $('reviewBody').innerHTML = `
+    <p class="sum-head">NEW ORDER – NORTHERN FLAVOURS</p>
+    ${entries.map(e => `<div class="sum-row"><span>${e.qty} × ${e.name}</span><strong>${fmt(e.price * e.qty)}</strong></div>`).join('')}
+    <div class="sum-row total"><span>Food Total</span><strong>${fmt(food)}</strong></div>
+    <div class="sum-type">
+      ${type === 'delivery'
+        ? `<p class="sum-type-head">🚚 Order Type: DELIVERY</p><p class="sum-addr">📍 ${address}</p>`
+        : `<p class="sum-type-head">🏪 Order Type: PICKUP</p><p class="sum-addr">No delivery charge — collect at ${CONFIG.address}</p>`}
+    </div>
+    <div class="sum-row"><span>🚚 Delivery Fee</span><strong>${type === 'pickup' ? '₦0' : fmt(CONFIG.deliveryFee)}</strong></div>
+    <div class="sum-row grand"><span>💵 Grand Total</span><strong>${fmt(grand)}</strong></div>
+    <div class="sum-customer">
+      <span>👤 Customer: <b>${name}</b></span>
+      <span>📞 Phone: <b>${phone}</b></span>
+      ${note ? `<span>📝 Note: ${note}</span>` : ''}
+    </div>`;
+}
+
+/* ============ WhatsApp ============ */
+function buildMessage(){
+  const entries = cartEntries(), food = foodTotal(), type = getSelectedType();
+  const fee = type === 'delivery' ? CONFIG.deliveryFee : 0;
+  const grand = food + fee;
+  const name = $('custName').value.trim();
+  const phone = $('custPhone').value.trim();
+  const address = $('custAddress').value.trim();
+  const note = $('custNote').value.trim();
+
+  const L = [];
+  L.push('🛍️ NEW ORDER – NORTHERN FLAVOURS');
+  L.push('');
+  L.push('Order Items:');
+  entries.forEach(e => L.push(`• ${e.qty} × ${e.name} — ${fmt(e.price * e.qty)}`));
+  L.push('');
+  L.push(`💰 Food Total: ${fmt(food)}`);
+  if (type === 'delivery'){
+    L.push('🚚 Order Type: DELIVERY');
+    L.push(`📍 Address: ${address}`);
+    L.push(`🚚 Delivery Fee: ${fmt(CONFIG.deliveryFee)}`);
+  } else {
+    L.push('🏪 Order Type: PICKUP');
+    L.push('🚚 Delivery Fee: ₦0');
+  }
+  L.push(`💵 Grand Total: ${fmt(grand)}`);
+  L.push('');
+  L.push(`👤 Customer: ${name}`);
+  L.push(`📞 Phone: ${phone}`);
+  if (note) L.push(`📝 Note: ${note}`);
+  L.push('');
+  L.push(type === 'delivery' ? 'Please confirm my order. Thank you.' : 'Please prepare my order for pickup. Thank you.');
+  return L.join('\n');
+}
+
+ $('confirmSendBtn').addEventListener('click', () => {
+  const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(buildMessage())}`;
+  $('waFallback').href = url;
+  window.open(url, '_blank', 'noopener');          // opens WhatsApp with the order pre-filled — customer presses SEND
+  cart = {}; saveCart(); renderCart();             // empty the tray once the order is handed to WhatsApp
+  showStep('success');
+  toast('Order sent to WhatsApp — press SEND there!', '✅');
+});
+
+/* ============ Steps & UI plumbing ============ */
+function showStep(step){
+  $('stepDetails').hidden = step !== 'details';
+  $('stepReview').hidden = step !== 'review';
+  $('stepSuccess').hidden = step !== 'success';
+  $('modalTitle').textContent = step === 'details' ? 'Your Details' : step === 'review' ? 'Review Your Order' : 'Order Sent';
+  ['dot1','dot2','dot3'].forEach((d, i) => $(d).classList.toggle('on',
+    (step === 'details' && i === 0) || (step === 'review' && i === 1) || (step === 'success' && i === 2)));
+  $('checkoutModal .modal-card').scrollTop = 0;
+}
+
+/* Hamburger */
+const header = $('siteHeader');
+ $('hamburgerBtn').addEventListener('click', () => {
+  const open = header.classList.toggle('nav-open');
+  $('hamburgerBtn').setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.main-nav a').forEach(a =>
+  a.addEventListener('click', () => { header.classList.remove('nav-open'); $('hamburgerBtn').setAttribute('aria-expanded', 'false'); }));
+
+/* Scroll spy */
+const navLinks = [...document.querySelectorAll('.main-nav a')];
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting)
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+['home','menu','how','about','contact'].forEach(id => spy.observe(document.getElementById(id)));
+
+/* Reveal on scroll */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting){
+      en.target.classList.add('in');
+      setTimeout(() => en.target.style.transitionDelay = '0ms', 900);
+      io.unobserve(en.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+/* Init */
+renderMenu();
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.querySelectorAll('.cfg-addr').forEach(el => el.textContent = CONFIG.address);
+document.querySelectorAll('.cfg-addr-short').forEach(el => el.textContent = CONFIG.addressShort);
+ $('year').textContent = new Date().getFullYear();
+renderCart();
+</script>
+</body>
+</html>
